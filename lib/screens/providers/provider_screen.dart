@@ -11,6 +11,7 @@ class ProviderScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Provider"),
+        centerTitle: true,
       ),
       body: Center(
         child: Text("The value is ${ref.watch(valueProvider)}"),

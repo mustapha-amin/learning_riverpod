@@ -13,7 +13,7 @@ class ProviderTile extends StatelessWidget {
   });
 
   Color randomColor() => Color.fromARGB(
-        Random().nextInt(225) + 30,
+        255,
         Random().nextInt(225) + 30,
         Random().nextInt(225) + 30,
         Random().nextInt(225) + 30,
@@ -37,7 +37,7 @@ class ProviderTile extends StatelessWidget {
           boxShadow: const [
             BoxShadow(
               color: Colors.black,
-              spreadRadius: 3,
+              spreadRadius: 2,
               offset: Offset(-8, 6),
             ),
           ],
