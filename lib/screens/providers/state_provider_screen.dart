@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final valueProvider = StateProvider<int>((ref) => 59);
+
+class ProviderScreen extends ConsumerWidget {
+  const ProviderScreen({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("State Provider"),
+      ),
+      body: Center(
+        child: Text("The value is ${ref.watch(valueProvider)}"),
+      ),
+    );
+  }
+}
