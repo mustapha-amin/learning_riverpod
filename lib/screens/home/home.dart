@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_riverpod/screens/providers/provider_screen.dart';
-import 'package:learning_riverpod/shared/provider_card.dart';
+import 'package:learning_riverpod/shared/provider_tile.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -17,13 +17,15 @@ class Home extends StatelessWidget {
           ),
         ],
       ),
-      body: const Column(
-        children: [
-          ProviderTile(
-            title: "Provider",
-            destination: ProviderScreen(),
-          ),
-        ],
+      body: const Center(
+        child: Column(
+          children: [
+            ProviderTile(
+              title: "Provider",
+              destination: ProviderScreen(),
+            ),
+          ],
+        ),
       ),
     );
   }
