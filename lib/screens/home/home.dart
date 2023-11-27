@@ -5,6 +5,7 @@ import 'package:learning_riverpod/shared/provider_tile.dart';
 import 'package:learning_riverpod/screens/providers/state_provider_screen.dart';
 
 import '../providers/future_provider_screen.dart';
+import '../providers/stream_provider_screen.dart';
 
 StateProvider<bool> isDarkMode = StateProvider((ref) => false);
 
@@ -43,6 +44,10 @@ class Home extends ConsumerWidget {
             const ProviderTile(
               title: "Future Provider",
               destination: FutureProviderScreen(),
+            ),
+            const ProviderTile(
+              title: "Stream Provider",
+              destination: StreamProviderScreen(),
             ),
           ],
         ),
