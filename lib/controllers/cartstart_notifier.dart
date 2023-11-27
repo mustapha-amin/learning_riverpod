@@ -2,30 +2,32 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:learning_riverpod/models/product.dart';
 import 'package:learning_riverpod/models/product_service.dart';
 
-class CartStateNotifier extends StateNotifier<List<Product>> implements ProductService {
+final cartStateNotifierProvider =
+    StateNotifierProvider<CartStateNotifier, List<Product>>(
+  (ref) => CartStateNotifier(),
+);
+
+class CartStateNotifier extends StateNotifier<List<Product>>
+    implements ProductService {
   CartStateNotifier() : super([]);
-  
+
   @override
   void addProduct(Product product) {
-    // TODO: implement addProduct
+    state = [...state, product];
   }
-  
+
   @override
   void clearCart() {
-    // TODO: implement clearCart
+    state = [];
   }
-  
+
   @override
   bool containsProduct(Product product) {
-    // TODO: implement containsProduct
-    throw UnimplementedError();
+    return state.contains(product);
   }
-  
+
   @override
   void removeProduct(Product product) {
-    // TODO: implement removeProduct
+    state = state.where((p) => product != p).toList();
   }
-
-  
-
 }

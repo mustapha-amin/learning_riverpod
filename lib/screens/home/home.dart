@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:learning_riverpod/screens/provider%20screens/provider_screen.dart';
 import 'package:learning_riverpod/screens/provider%20screens/changenotifer_provider_screen.dart';
+import 'package:learning_riverpod/screens/provider%20screens/statenotifierprovider_screen.dart';
 import 'package:learning_riverpod/shared/provider_tile.dart';
-import 'package:learning_riverpod/screens/provider%20screens/state_notifier_screen.dart';
+import 'package:learning_riverpod/screens/provider%20screens/state_provider_screen.dart';
 
 import '../provider screens/future_provider_screen.dart';
 import '../provider screens/stream_provider_screen.dart';
@@ -45,18 +46,26 @@ class Home extends ConsumerWidget {
               title: "State Provider ${ref.watch(stateProvider)}",
               destination: const StateProviderScreen(),
             ),
-            const ProviderTile(
+            // ignore: prefer_const_constructors
+            ProviderTile(
               title: "Future Provider",
-              destination: FutureProviderScreen(),
+              destination: const FutureProviderScreen(),
             ),
-            const ProviderTile(
+            // ignore: prefer_const_constructors
+            ProviderTile(
               title: "Stream Provider",
-              destination: StreamProviderScreen(),
+              destination: const StreamProviderScreen(),
             ),
-            const ProviderTile(
+            // ignore: prefer_const_constructors
+            ProviderTile(
               title: "ChangeNotifier Provider",
-              destination: ChangeNotifierProviderScreen(),
+              destination: const ChangeNotifierProviderScreen(),
             ),
+            // ignore: prefer_const_constructors
+            ProviderTile(
+              title: "StateNotifier Provider",
+              destination: const StateNotifierProviderScreen(),
+            )
           ],
         ),
       ),
