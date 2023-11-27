@@ -1,16 +1,5 @@
 # learning_riverpod
 
-A new Flutter project.
+My journey through learning about various providers in riverpod
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![1qlbab5PVs](https://github.com/mustapha-amin/learning_riverpod/assets/70119794/f08953fa-8300-49f9-b634-e3ea4a7a7b55)
