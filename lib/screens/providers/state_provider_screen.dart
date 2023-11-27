@@ -10,7 +10,7 @@ class StateProviderScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.listen<int>(stateProvider, (prev, curr) {
+    ref.listen<int>(stateProvider, (_, curr) {
       if (curr % 10 == 0) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
