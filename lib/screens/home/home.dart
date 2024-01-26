@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:learning_riverpod/screens/provider%20screens/notifier_provider_screen.dart';
 import 'package:learning_riverpod/screens/provider%20screens/provider_screen.dart';
 import 'package:learning_riverpod/screens/provider%20screens/changenotifer_provider_screen.dart';
 import 'package:learning_riverpod/screens/provider%20screens/statenotifierprovider_screen.dart';
@@ -65,7 +66,11 @@ class Home extends ConsumerWidget {
             ProviderTile(
               title: "StateNotifier Provider",
               destination: const StateNotifierProviderScreen(),
-            )
+            ),
+            ProviderTile(
+              title: "Notifier Provider",
+              destination: const NotifierProviderScreen(),
+            ),
           ],
         ),
       ),
