@@ -42,7 +42,7 @@ class _NotifierProviderScreenState
                             .read(todosNotifierProvider.notifier)
                             .toggleTodo(todo.id);
                       },
-                      title: Text(todo.description),
+                      title: Text(todo.title),
                     ),
                   ),
                 ),
@@ -65,7 +65,7 @@ class _NotifierProviderScreenState
                   TextButton(
                     onPressed: () {
                       ref.read(todosNotifierProvider.notifier).addTodo(
-                            Todo.withDescription(
+                            Todo.withTitle(
                               todoController.text.trim(),
                             ),
                           );

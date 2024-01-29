@@ -16,11 +16,11 @@ class TodoNotifier extends Notifier<List<Todo>> {
     state = [...state, todo];
   }
 
-  void removeTodo(String id) {
+  void removeTodo(int id) {
     state = state.where((todo) => todo.id != id).toList();
   }
 
-  void toggleTodo(String id) {
+  void toggleTodo(int id) {
     state = state
         .map((e) => e.id == id ? e.copyWith(completed: !e.completed) : e)
         .toList();

@@ -1,27 +1,35 @@
 class Todo {
   Todo({
     required this.id,
-    required this.description,
+    required this.title,
     required this.completed,
   });
 
-  final String id;
-  final String description;
+  final int id;
+  final String title;
   final bool completed;
 
-  Todo copyWith({String? id, String? description, bool? completed}) {
+  Todo copyWith({int? id, String? title, bool? completed}) {
     return Todo(
       id: id ?? this.id,
-      description: description ?? this.description,
+      title: title ?? this.title,
       completed: completed ?? this.completed,
     );
   }
 
-  factory Todo.withDescription(String? description) {
+  factory Todo.withTitle(String? title) {
     return Todo(
-      id: DateTime.now().microsecondsSinceEpoch.toString(),
-      description: description!,
+      id: DateTime.now().microsecondsSinceEpoch,
+      title: title!,
       completed: false,
+    );
+  }
+
+  factory Todo.fromJson(Map<String, dynamic> map) {
+    return Todo(
+      id: map['id'],
+      title: map['title'],
+      completed: map['completed'],
     );
   }
 }
